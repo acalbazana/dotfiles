@@ -1,2 +1,2 @@
-# vimrc-dotfile
-my vim configuration
+# dotfiles
+dot files...
