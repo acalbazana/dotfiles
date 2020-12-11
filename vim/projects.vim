@@ -11,5 +11,6 @@ Project 'com.cscglobal.samples.terraform-vault' , 'vault'
 Project '~/.config/vim', 'vim-config'
 Project 'com.cscglobal.samples.api-management', 'api-management'
 Project 'dotfiles', 'dotfiles'
+Project 'api-management-terraform', 'api-management-terraform'
 
 call project#rc()

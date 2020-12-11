@@ -5,6 +5,7 @@ call plug#begin()
 "Plug 'preservim/nerdtree'
 "Plug 'thaerkh/vim-workspace'
 Plug 'RRethy/vim-illuminate'
+Plug 'SirVer/ultisnips'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
@@ -16,7 +17,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-journal'
 Plug 'jvirtanen/vim-hcl'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'morhetz/gruvbox'
 Plug 'mtth/scratch.vim'
@@ -40,7 +43,8 @@ Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
-Plug 'SirVer/ultisnips'
+Plug 'junegunn/vim-online-thesaurus'
+
 
 call plug#end()
 

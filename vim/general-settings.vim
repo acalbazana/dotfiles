@@ -35,6 +35,12 @@ set wmh=0
 
 syntax on
 
+" fold with space
+nnoremap <Space> za
+
+" commentary
+nnoremap <leader>c :Commentary<CR>
+
 
 " end of line, beginning of line
 imap <c-e> <c-o>$
@@ -46,6 +52,11 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 "tab buffer navigation
 nnoremap <C-S-tab> :bprevious<CR>
 nnoremap <C-tab>   :bnext<CR>
+
+
+" select entire buffer
+nnoremap <leader>va ggvGg_
+nnoremap <leader>Va ggVG
 
 "nnoremap <leader>ex :NERDTreeToggle<CR>
 
@@ -73,6 +84,7 @@ nnoremap <leader>' viW<esc>a'<esc>gvo<esc>i'<esc>gvo<esc>3l
 
 " open my VIMRC with the quickness
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " make a session
 nnoremap <leader>s :mksession<CR>
@@ -88,4 +100,36 @@ map mkd console mkdir%space
 " git stuff
 map <Leader>gwip :cd %:p:h<cr>:!git add . && git commit -m 'WIP' && git push<cr>
 
+
+vnoremap <Space> za
+
+" Ctrl-s to save and return to normal mode if previously in insert mode.
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
+
+" Move plugin: move lines or blocks of text up/down using Alt+j/k.
+" In your ~/.vimrc
+"
+" Normal mode
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+
+" Insert mode
+inoremap <C-j> <ESC>:m .+1<CR>==gi
+inoremap <C-k> <ESC>:m .-2<CR>==gi
+
+" Visual mode
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" Simple indentation
+vnoremap < <gv
+vnoremap > >gv|
+vnoremap <Tab> >gv|
+vnoremap <S-Tab> <gv
+nnoremap <Tab> mzV>`zl
+nnoremap <S-Tab> mzV<`zh
+
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>
 
